@@ -157,12 +157,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 52px;
-            font-weight: 800;
-            background-image: linear-gradient(135deg, #6366f1, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
             position: relative;
         }
 
@@ -315,6 +309,22 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item a {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 8px;
+            border-radius: 6px;
+        }
+
+        .contact-item a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         }
 
         .contact-item::before {
@@ -436,6 +446,7 @@
             display: inline-block;
             font-weight: 700;
             letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(99, 102, 241, 0.1);
         }
 
         .section-header h2::after {
@@ -445,11 +456,11 @@
             left: 0;
             width: 60px;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--neon-glow));
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color), #06b6d4);
             background-size: 200% 100%;
             border-radius: 2px;
             animation: expandWidth 0.8s ease-out, gradientSlide 2s ease infinite;
-            box-shadow: 0 0 10px var(--primary-color);
+            box-shadow: 0 0 15px var(--primary-color);
         }
 
         @keyframes gradientSlide {
@@ -555,6 +566,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: var(--shadow-md);
+            backdrop-filter: blur(10px);
         }
 
         .card::before {
@@ -564,7 +576,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.08), transparent);
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.12), transparent);
             transition: left 0.6s ease;
         }
 
@@ -578,11 +590,12 @@
             background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
             opacity: 0;
             transition: opacity 0.5s ease;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
         }
 
         .card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: var(--shadow-xl), 0 0 50px rgba(99, 102, 241, 0.15);
+            transform: translateY(-5px) scale(1.005);
+            box-shadow: var(--shadow-xl), 0 0 60px rgba(99, 102, 241, 0.2);
             border-color: #c7d2fe;
         }
 
@@ -638,6 +651,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: var(--shadow-sm);
+            backdrop-filter: blur(10px);
         }
 
         .skill-category::before {
@@ -651,6 +665,7 @@
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
         }
 
         .skill-category::after {
@@ -660,14 +675,14 @@
             right: -50%;
             width: 150%;
             height: 150%;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.08), transparent 70%);
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.12), transparent 70%);
             opacity: 0;
             transition: opacity 0.5s ease;
         }
 
         .skill-category:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: var(--shadow-lg), 0 0 40px rgba(99, 102, 241, 0.12);
+            transform: translateY(-3px) scale(1.005);
+            box-shadow: var(--shadow-lg), 0 0 45px rgba(99, 102, 241, 0.18);
             border-color: #c7d2fe;
         }
 
@@ -723,14 +738,14 @@
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 13px;
-            border: 1px solid #c7d2fe;
+            border: 1.5px solid #c7d2fe;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             animation: popIn 0.5s ease-out backwards;
             position: relative;
             overflow: hidden;
             font-weight: 600;
             letter-spacing: 0.3px;
-            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.5);
         }
 
         .skill-tag::before {
@@ -740,7 +755,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.15), transparent);
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
             transition: left 0.5s ease;
         }
 
@@ -765,10 +780,10 @@
         .skill-tag:hover {
             background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: white;
-            transform: scale(1.05) translateY(-2px);
+            transform: scale(1.01) translateY(-2px);
             box-shadow: 
-                var(--shadow-md),
-                0 0 20px rgba(99, 102, 241, 0.25);
+                var(--shadow-lg),
+                0 0 25px rgba(99, 102, 241, 0.35);
             border-color: #6366f1;
         }
 
@@ -857,7 +872,7 @@
         .top-skill:nth-child(5) { animation-delay: 0.4s; }
 
         .top-skill:hover {
-            transform: translateY(-5px) scale(1.08);
+            transform: translateY(-2px) scale(1.01);
             box-shadow: 
                 var(--shadow-lg),
                 0 0 40px rgba(99, 102, 241, 0.4);
@@ -866,25 +881,24 @@
 
         /* Stats Section */
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .stat-card {
             background: white;
             border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 24px;
-            text-align: center;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-md);
+            backdrop-filter: blur(10px);
         }
 
-        .stat-card::before {
+        .stats-grid::before {
             content: '';
             position: absolute;
             top: 0;
@@ -895,16 +909,62 @@
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
         }
 
-        .stat-card:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: var(--shadow-lg), 0 0 30px rgba(99, 102, 241, 0.15);
+        .stats-grid::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stats-grid:hover {
+            transform: translateY(-3px) scale(1.005);
+            box-shadow: var(--shadow-lg), 0 0 40px rgba(99, 102, 241, 0.2);
             border-color: #c7d2fe;
         }
 
-        .stat-card:hover::before {
+        .stats-grid:hover::before {
             transform: scaleX(1);
+        }
+
+        .stats-grid:hover::after {
+            opacity: 1;
+        }
+
+        .stat-card {
+            background: transparent;
+            border: none;
+            border-radius: 16px;
+            padding: 0;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: none;
+            backdrop-filter: none;
+            flex: 0 1 auto;
+            min-width: 100px;
+        }
+
+        .stat-card::before {
+            display: none;
+        }
+
+        .stat-card::after {
+            display: none;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.01) translateY(-2px);
+            box-shadow: none;
+            border-color: transparent;
         }
 
         .stat-number {
@@ -943,6 +1003,11 @@
             position: relative;
             padding-left: 40px;
             margin-bottom: 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .experience-item:hover {
+            padding-left: 45px;
         }
 
         .experience-item::before {
@@ -954,9 +1019,17 @@
             height: 18px;
             background: linear-gradient(135deg, #6366f1, #ec4899);
             border-radius: 50%;
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 4px 12px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.6), 0 4px 12px rgba(99, 102, 241, 0.4);
             animation: pulse-dot 2s ease-in-out infinite;
             border: 3px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover::before {
+            width: 22px;
+            height: 22px;
+            left: -2px;
+            box-shadow: 0 0 35px rgba(99, 102, 241, 0.7), 0 6px 16px rgba(99, 102, 241, 0.5);
         }
 
         @keyframes pulse-dot {
@@ -964,7 +1037,7 @@
                 box-shadow: 0 0 20px var(--accent-color);
             }
             50% {
-                box-shadow: 0 0 30px var(--accent-color), 0 0 40px var(--accent-color);
+                box-shadow: 0 0 35px var(--accent-color), 0 0 50px var(--accent-color);
             }
         }
 
@@ -976,6 +1049,11 @@
             width: 3px;
             height: calc(100% - 18px);
             background: linear-gradient(180deg, #6366f1, #e0e7ff);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover::after {
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
         }
 
         .experience-item:last-child::after {
@@ -988,6 +1066,11 @@
             margin-bottom: 6px;
             font-weight: 700;
             letter-spacing: 0.2px;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover .exp-title {
+            color: #6366f1;
         }
 
         .exp-meta {
@@ -1005,6 +1088,121 @@
             line-height: 1.7;
             font-weight: 400;
             font-size: 14px;
+        }
+
+        /* Experience Projects Section */
+        .exp-projects-section {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .exp-projects-title {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .exp-projects-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .exp-project-badge {
+            background: #e0e7ff;
+            color: #4c1d95;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .exp-project-badge:hover {
+            background: #c7d2fe;
+            transform: translateY(-2px);
+        }
+
+        .exp-project-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+        }
+
+        .exp-project-link:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+        }
+
+        /* Experience Responsibilities */
+        .exp-responsibilities {
+            margin: 12px 0;
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .exp-responsibilities ul {
+            list-style: none;
+            margin: 8px 0 0 0;
+            padding: 0;
+        }
+
+        .exp-responsibilities li {
+            padding-left: 20px;
+            margin-bottom: 6px;
+            position: relative;
+            font-weight: 400;
+        }
+
+        .exp-responsibilities li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .exp-projects-container {
+                gap: 8px;
+            }
+
+            .exp-project-badge,
+            .exp-project-link {
+                font-size: 11px;
+                padding: 5px 10px;
+            }
+
+            .exp-project-link {
+                padding: 5px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .exp-projects-container {
+                gap: 6px;
+            }
+
+            .exp-project-badge,
+            .exp-project-link {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+
+            .exp-project-link {
+                padding: 4px 10px;
+            }
         }
 
         /* Floating Particles Background */
@@ -1036,8 +1234,67 @@
             }
         }
 
-        /* Responsive Design */
-        @media (max-width: 1024px) {
+        /* Footer Styles */
+        .footer-container {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+        }
+
+        .footer-copyright {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .footer-details {
+            font-size: 13px;
+            margin-top: 10px;
+            color: var(--text-muted);
+        }
+
+        .footer-credit {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                padding: 30px 0;
+                margin-top: 50px;
+            }
+
+            .footer-details {
+                font-size: 12px;
+                margin-top: 8px;
+            }
+
+            .footer-credit {
+                font-size: 11px;
+                margin-top: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-container {
+                padding: 20px 0;
+                margin-top: 40px;
+            }
+
+            .footer-copyright,
+            .footer-details,
+            .footer-credit {
+                font-size: 11px;
+            }
+
+            .footer-details {
+                margin-top: 6px;
+            }
+
+            .footer-credit {
+                margin-top: 6px;
+            }
             :root {
                 --sidebar-width: 280px;
             }
@@ -1063,7 +1320,8 @@
             }
 
             .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 25px;
             }
         }
 
@@ -1154,13 +1412,14 @@
             }
 
             .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
+                gap: 10px;
+                padding: 20px;
                 margin-bottom: 30px;
+                flex-direction: row;
             }
 
             .stat-card {
-                padding: 18px;
+                min-width: 80px;
             }
 
             .stat-number {
@@ -1324,15 +1583,18 @@
             }
 
             .stats-grid {
-                gap: 10px;
+                gap: 6px;
+                padding: 16px;
+                flex-direction: row;
+                justify-content: space-between;
             }
 
             .stat-card {
-                padding: 14px;
+                min-width: 60px;
             }
 
             .stat-number {
-                font-size: 24px;
+                font-size: 20px;
             }
 
             .stat-label {
@@ -1474,21 +1736,47 @@
             justify-content: center;
             font-size: 22px;
             cursor: pointer;
-            box-shadow: var(--shadow-md), 0 0 20px rgba(99, 102, 241, 0.25);
+            box-shadow: var(--shadow-md), 0 0 25px rgba(99, 102, 241, 0.35);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid white;
             animation: float 3s ease-in-out infinite;
             font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fab::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shine 2s ease infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) translateY(-100%);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%);
+            }
         }
 
         .fab:hover {
-            transform: translateY(-5px) scale(1.1) rotate(90deg);
-            box-shadow: var(--shadow-lg), 0 0 35px rgba(99, 102, 241, 0.4);
+            transform: translateY(-5px) scale(1.12) rotate(90deg);
+            box-shadow: var(--shadow-lg), 0 0 40px rgba(99, 102, 241, 0.5);
             background: linear-gradient(135deg, #ec4899, #f97316);
         }
 
         .fab.scroll-top {
             animation-delay: 0.2s;
+        }
+
+        .fab.print-btn {
+            animation-delay: 0.4s;
         }
 
         /* Landscape Mobile Devices */
@@ -1577,6 +1865,9 @@
                 position: relative;
                 width: 100%;
                 height: auto;
+                background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+                padding: 40px 30px;
+                color: white;
             }
 
             .main-content {
@@ -1585,6 +1876,39 @@
 
             .particle {
                 display: none;
+            }
+
+            .scroll-progress {
+                display: none;
+            }
+
+            .fab-container {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+
+            body::before,
+            body::after {
+                display: none;
+            }
+
+            .section-header::after {
+                display: none;
+            }
+
+            .card,
+            .skill-category,
+            .stat-card {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+
+            .experience-item {
+                page-break-inside: avoid;
             }
         }
     </style>
@@ -1611,7 +1935,7 @@
     <!-- Sticky Sidebar -->
     <aside class="sidebar" id="sidebar">
         <div class="profile-img-container">
-            VK
+            <img src="https://yt3.googleusercontent.com/ytc/AIdro_kPCVHENWVAa-kJj1lK_l9mI5vsRPBI0tAdvsbRw54FCA=s160-c-k-c0x00ffffff-no-rj" alt="Vinay Kumar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
         </div>
         <h1>Vinay Kumar</h1>
         <p class="title">Front-End/UI Developer</p>
@@ -1626,21 +1950,32 @@
 
         <div class="contact-info">
             <h3>Contact</h3>
-            <div class="contact-item">contact@email.com</div>
-            <div class="contact-item">+1 234 567 8900</div>
-            <div class="contact-item">Location: Your City</div>
-            <div class="contact-item">LinkedIn Profile</div>
-            <div class="contact-item">GitHub Portfolio</div>
+            <div class="contact-item">
+                <a href="mailto:mistervinay@zohomail.in" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">📧 mistervinay@zohomail.in</a>
+            </div>
+            <div class="contact-item" style="display: flex; align-items: center; gap: 8px;">
+                📍 <span>Virar (E), Palghar - 401303</span>
+            </div>
+            <div class="contact-item">
+                <a href="https://www.linkedin.com/in/vkgupta704" target="_blank" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">💼 LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <a href="https://www.youtube.com/@mistervinay" target="_blank" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">📺 YouTube</a>
+            </div>
+            <div class="contact-item">
+                <a href="tel:+918169526158" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">📱 +91-8169526158</a>
+            </div>
         </div>
 
         <div class="sidebar-top-skills">
             <h3>Top Skills</h3>
             <div class="sidebar-skill-badges">
                 <span class="sidebar-skill">HTML5</span>
-                <span class="sidebar-skill">JavaScript</span>
                 <span class="sidebar-skill">CSS3</span>
-                <span class="sidebar-skill">React.js</span>
-                <span class="sidebar-skill">GitHub Copilot</span>
+                <span class="sidebar-skill">JavaScript</span>
+                <span class="sidebar-skill">ReactJS</span>
+                <span class="sidebar-skill">Bootstrap</span>
+                <span class="sidebar-skill">OutSystems</span>
             </div>
         </div>
     </aside>
@@ -1650,8 +1985,8 @@
         <!-- Hero Section -->
         <div class="hero section">
             <h1 data-text="Front-End/UI Developer">Front-End/UI Developer</h1>
-            <p class="subtitle">Crafting Beautiful & Responsive Web Experiences</p>
-            <p class="years">🚀 10+ Years of Excellence in Web Development</p>
+            <p class="subtitle">Expert in Responsive Design & UI Implementation</p>
+            <p class="years">🚀 10+ Years of Professional Web Development</p>
         </div>
 
         <!-- Stats Section -->
@@ -1661,15 +1996,15 @@
                 <div class="stat-label">Years Experience</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">100+</div>
+                <div class="stat-number">50+</div>
                 <div class="stat-label">Projects Completed</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Happy Clients</div>
+                <div class="stat-number">4</div>
+                <div class="stat-label">Companies</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">15+</div>
+                <div class="stat-number">20+</div>
                 <div class="stat-label">Technologies</div>
             </div>
         </div>
@@ -1683,15 +2018,15 @@
             <div class="card">
                 <div class="card-content">
                     <p class="brief-text">
-                        I am a seasoned Front-End/UI Developer with over 10+ years of experience in designing, developing, and maintaining responsive websites and web applications. My core technical expertise includes JavaScript, React.js, HTML5, CSS3, SCSS, jQuery, and MySQL, along with strong hands-on experience in converting Figma designs into pixel-perfect, responsive HTML/CSS layouts. I leverage AI-assisted development tools (such as GitHub Copilot) to enable faster, cleaner, and more efficient coding, ensuring high productivity without compromising code quality. I also have extensive experience using development tools such as VS Code and NetBeans, as well as low-code platforms like OutSystems.
+                        Experienced Sr. Front-End/UI Developer with 10+ years of professional expertise in creating responsive, user-centric web interfaces and applications. Specialized in converting Figma designs into pixel-perfect HTML/CSS layouts and modern web applications using React.js. Proficient in HTML5, CSS3, JavaScript (ES6+), Bootstrap, and OutSystems low-code platform.
                     </p>
                     <br>
                     <p class="brief-text">
-                        I also possess a solid understanding of backend technologies, including basic PHP, WordPress, and MVC frameworks such as CodeIgniter, enabling me to contribute effectively to full-stack development when required. I am comfortable working both independently and collaboratively, managing projects end-to-end while consistently delivering high-quality, performance-optimized, and user-centric solutions.
+                        Strong background in responsive design, UI/UX refinement, and cross-functional collaboration with designers and backend developers. Experienced with full-stack contributions using PHP, CodeIgniter, WordPress, and MySQL. <strong>Expert in AI-Copilot integration achieving 3x speed improvement</strong> in development cycles—leveraging advanced prompt engineering for intelligent code generation, rapid debugging, and optimized prototyping to deliver high-quality solutions with unprecedented efficiency.
                     </p>
                     <br>
                     <p class="brief-text">
-                        Highly adaptable and proactive, I am always eager to take on new challenges and continuously enhance my skill set to stay aligned with evolving web technologies and industry best practices.
+                        Known for expertise in fixing interface inconsistencies, optimizing user journeys, and writing clean, maintainable, SEO-friendly code. Proficient with Git, VS Code, WAMP/XAMPP, and committed to staying current with emerging web technologies and industry best practices.
                     </p>
                 </div>
             </div>
@@ -1710,7 +2045,7 @@
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
                         <span class="skill-tag">SCSS</span>
-                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
                         <span class="skill-tag">jQuery</span>
                     </div>
                 </div>
@@ -1719,14 +2054,14 @@
                     <h3>Frameworks & Libraries</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">Bootstrap</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Material-UI</span>
+                        <span class="skill-tag">Bootstrap 3/4/5</span>
+                        <span class="skill-tag">Figma to HTML</span>
+                        <span class="skill-tag">AJAX</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Backend & Database</h3>
+                    <h3>Backend & CMS</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">PHP</span>
                         <span class="skill-tag">MySQL</span>
@@ -1736,34 +2071,37 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
+                    <h3>Low-Code & AI Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OutSystems</span>
+                        <span class="skill-tag">AI Copilot (3x Speed) ⚡</span>
+                        <span class="skill-tag">Code Generation</span>
+                        <span class="skill-tag">Debugging & Optimization</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Version Control</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">GitHub Copilot</span>
-                        <span class="skill-tag">Figma to HTML</span>
-                        <span class="skill-tag">OutSystems</span>
-                        <span class="skill-tag">NetBeans</span>
                         <span class="skill-tag">Git</span>
+                        <span class="skill-tag">WAMP/XAMPP</span>
+                        <span class="skill-tag">FTP</span>
+                        <span class="skill-tag">cPanel</span>
+                        <span class="skill-tag">Domain Hosting</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Specializations</h3>
+                    <h3>Key Expertise</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Responsive Design</span>
-                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">UI/UX Refinement</span>
                         <span class="skill-tag">Performance Optimization</span>
                         <span class="skill-tag">Cross-Browser Compatibility</span>
-                        <span class="skill-tag">Accessibility (A11y)</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>AI-Assisted Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">GitHub Copilot</span>
-                        <span class="skill-tag">AI Code Generation</span>
-                        <span class="skill-tag">Rapid Prototyping</span>
+                        <span class="skill-tag">Code Quality & SEO</span>
+                        <span class="skill-tag">AI-Driven Development</span>
                     </div>
                 </div>
             </div>
@@ -1778,41 +2116,114 @@
             <div class="card">
                 <div class="card-content">
                     <div class="experience-item">
-                        <h3 class="exp-title">Senior Front-End/UI Developer</h3>
-                        <p class="exp-meta">2014 - Present | 10+ Years</p>
-                        <p class="exp-description">
-                            Leading the design and development of responsive web applications and interfaces. Specializing in React.js development, converting Figma designs to pixel-perfect implementations, and optimizing web performance. Leveraging AI-assisted tools like GitHub Copilot to enhance productivity and code quality.
-                        </p>
+                        <h3 class="exp-title">Sr. Front End/UI Developer (Assistant Manager)</h3>
+                        <p class="exp-meta">Motilal Oswal Financial Services Ltd, Mumbai | Feb 2022 - Present</p>
+                        <div class="exp-responsibilities">
+                            <ul>
+                                <li>Converting Figma designs into pixel-perfect responsive HTML UI for internal partner dashboards and financial platforms</li>
+                                <li>Maintaining and enhancing OutSystems projects with optimized code architecture</li>
+                                <li>Developing responsive web applications with Bootstrap 4 framework ensuring cross-browser compatibility</li>
+                                <li>Creating HTML to PDF layouts for financial reports and documentation</li>
+                                <li>Supporting React.js development and one-code responsive design implementations</li>
+                                <li>Mentoring junior developers on UI/UX best practices and responsive design patterns</li>
+                                <li>Performance optimization and code quality improvements across multiple projects</li>
+                            </ul>
+                        </div>
+                        <div class="exp-projects-section">
+                            <p class="exp-projects-title">Key Projects:</p>
+                            <div class="exp-projects-container">
+                                <span class="exp-project-badge">MoFirst</span>
+                                <span class="exp-project-badge">Advisory Pro</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="experience-item">
-                        <h3 class="exp-title">Full-Stack Development Contributions</h3>
-                        <p class="exp-meta">Ongoing | Backend Integration</p>
-                        <p class="exp-description">
-                            Contributing to full-stack projects using PHP, MySQL, WordPress, and CodeIgniter MVC framework. Building RESTful APIs, managing databases, and ensuring seamless front-end to back-end integration.
-                        </p>
+                        <h3 class="exp-title">Sr. Front End/UI Developer</h3>
+                        <p class="exp-meta">Goldmine Advertising Limited, Mumbai | Dec 2019 - Feb 2022</p>
+                        <div class="exp-responsibilities">
+                            <ul>
+                                <li>Developed and deployed client websites with responsive Bootstrap 4 framework for diverse industries</li>
+                                <li>Maintained and optimized Shopify e-commerce sites for improved user experience and conversion</li>
+                                <li>Created responsive landing pages with conversion optimization and A/B testing implementation</li>
+                                <li>Customized WordPress themes and developed custom plugins for client requirements</li>
+                                <li>Designed and developed custom HTML emailers with responsive templates for MailChimp campaigns</li>
+                                <li>Managed MailChimp campaign setup, testing, and performance tracking</li>
+                                <li>Performed comprehensive quality assurance and front-end bug fixes across all projects</li>
+                                <li>Collaborated with design team to ensure pixel-perfect implementation of UI/UX designs</li>
+                            </ul>
+                        </div>
+                        <div class="exp-projects-section">
+                            <p class="exp-projects-title">Website Projects:</p>
+                            <div class="exp-projects-container">
+                                <a href="https://www.zamels.com.au" target="_blank" class="exp-project-link">🔗 zamels.com.au</a>
+                                <a href="https://mazzucchellis.com.au" target="_blank" class="exp-project-link">🔗 mazzucchellis.com.au</a>
+                                <a href="https://www.balashatrust.org" target="_blank" class="exp-project-link">🔗 balashatrust.org</a>
+                                <a href="http://www.wealthsmithtalks.com" target="_blank" class="exp-project-link">🔗 wealthsmithtalks.com</a>
+                                <a href="https://www.wemoveforward.in" target="_blank" class="exp-project-link">🔗 wemoveforward.in</a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="experience-item">
-                        <h3 class="exp-title">Low-Code Platform Development</h3>
-                        <p class="exp-meta">Recent Experience | OutSystems</p>
-                        <p class="exp-description">
-                            Developed enterprise applications using OutSystems low-code platform, combining traditional development expertise with rapid application development methodologies.
-                        </p>
+                        <h3 class="exp-title">Web/UI Developer</h3>
+                        <p class="exp-meta">iShoutnow Technologies Pvt. Ltd, Mumbai | Jan 2018 - Dec 2019</p>
+                        <div class="exp-responsibilities">
+                            <ul>
+                                <li>Developed responsive websites using Bootstrap 4 framework with mobile-first approach</li>
+                                <li>Created custom HTML emailers with responsive templates for email marketing campaigns</li>
+                                <li>Maintained and updated WordPress sites with custom theme modifications</li>
+                                <li>Implemented form validations using jQuery and vanilla JavaScript for enhanced user experience</li>
+                                <li>Conducted comprehensive quality assurance testing across multiple browsers and devices</li>
+                                <li>Identified and fixed responsive UI bugs ensuring consistent design across all breakpoints</li>
+                                <li>Optimized website performance and improved page load times</li>
+                                <li>Collaborated with backend developers on API integration and dynamic content implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="exp-title">Web Developer</h3>
+                        <p class="exp-meta">Postbox Communications, Mumbai | Nov 2015 - Dec 2017</p>
+                        <div class="exp-responsibilities">
+                            <ul>
+                                <li>Converted PSD designs to pixel-perfect HTML5 and CSS3 layouts with semantic markup</li>
+                                <li>Developed new responsive websites using HTML5, CSS3, jQuery, and Bootstrap 3 framework</li>
+                                <li>Implemented interactive features and animations using jQuery plugins and custom scripts</li>
+                                <li>Designed and developed custom HTML emailers for email marketing and newsletter campaigns</li>
+                                <li>Fixed front-end user interface bugs and ensured cross-browser compatibility</li>
+                                <li>Worked on client projects for Bajaj Allianz and Aditya Birla Group with specific requirements</li>
+                                <li>Optimized website performance and improved SEO through code optimization</li>
+                                <li>Collaborated with designers and project managers to deliver high-quality web solutions</li>
+                            </ul>
+                        </div>
+                        <div class="exp-projects-section">
+                            <p class="exp-projects-title">Company & Client Projects:</p>
+                            <div class="exp-projects-container">
+                                <a href="https://www.postboxcommunications.com/" target="_blank" class="exp-project-link">🏢 Postbox Communications</a>
+                                <span class="exp-project-badge">📋 Bajaj Allianz</span>
+                                <span class="exp-project-badge">📋 Aditya Birla Group</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer style="text-align: center; padding: 40px 0; color: var(--text-muted); border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 60px;">
-            <p>© 2026 Vinay Kumar | Front-End/UI Developer</p>
-            <p style="font-size: 14px; margin-top: 10px;">Crafted with ❤️ using HTML5, CSS3 & JavaScript</p>
+        <footer class="footer-container">
+            <p class="footer-copyright">© 2026 Vinay Kumar | Sr. Front-End/UI Developer</p>
+            <p class="footer-details">DOB: 05 June 1995 | Mobile: +91-8169526158 | Mumbai, India</p>
+            <p class="footer-details">Languages: Hindi, English, Marathi | Nationality: Indian</p>
+            <p class="footer-credit">Crafted with ❤️ using HTML5, CSS3 & JavaScript</p>
         </footer>
     </main>
 
     <!-- Floating Action Buttons -->
     <div class="fab-container">
+        <div class="fab print-btn" onclick="printResume()" title="Print Resume">
+            🖨️
+        </div>
         <div class="fab scroll-top" onclick="scrollToTop()" title="Scroll to Top">
             ↑
         </div>
@@ -1835,6 +2246,11 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        }
+
+        // Print Resume Function
+        function printResume() {
+            window.print();
         }
 
         // Smooth scrolling for navigation
@@ -1895,7 +2311,7 @@
             rootMargin: '0px 0px -100px 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const scrollObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
@@ -1911,7 +2327,7 @@
 
         // Observe all sections
         document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
+            scrollObserver.observe(section);
         });
 
         // Animate stat numbers
@@ -1987,10 +2403,10 @@
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
                 
-                const rotateX = (y - centerY) / 20;
-                const rotateY = (centerX - x) / 20;
+                const rotateX = (y - centerY) / 50;
+                const rotateY = (centerX - x) / 50;
                 
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
             });
             
             card.addEventListener('mouseleave', () => {
@@ -2020,7 +2436,42 @@
         // Console greeting
         console.log('%c👋 Hello! Thanks for checking out my resume!', 'color: #667eea; font-size: 20px; font-weight: bold;');
         console.log('%cLet\'s build something amazing together! 🚀', 'color: #f093fb; font-size: 16px;');
-        console.log('%c✨ Sticky sidebar is now fully functional!', 'color: #00f0ff; font-size: 14px;');
+        console.log('%c✨ Enhanced UI with improved animations and interactions!', 'color: #00f0ff; font-size: 14px;');
+
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable Developer Tools keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // F12 - Developer Tools
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+I / Cmd+Option+I - Inspect Element
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+C / Cmd+Option+C - Inspect Element (Chrome)
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+K / Cmd+Option+K - Developer Console
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'K') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+J / Cmd+Option+J - Developer Console (Chrome)
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+        });
     </script>
 </body>
 </html>
