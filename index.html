@@ -1860,8 +1860,6 @@
             cursor: pointer;
             transition: all 0.3s ease;
             z-index: 10;
-            align-items: center;
-            justify-content: center;
         }
 
         .sidebar-close:hover,
@@ -1889,6 +1887,8 @@
         @media (max-width: 768px) {
             .sidebar-close {
                 display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
 
@@ -1933,9 +1933,9 @@
 
         <nav>
             <ul class="nav-menu">
-                <li><a href="#about" aria-label="Navigate to About Me section">About Me</a></li>
-                <li><a href="#skills" aria-label="Navigate to Skills section">Skills</a></li>
-                <li><a href="#experience" aria-label="Navigate to Experience section">Experience</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
             </ul>
         </nav>
 
@@ -2212,12 +2212,12 @@
 
     <!-- Floating Action Buttons -->
     <div class="fab-container">
-        <div class="fab print-btn" onclick="printResume()" title="Print Resume" role="button" aria-label="Print Resume" tabindex="0">
+        <button class="fab print-btn" onclick="printResume()" title="Print Resume" aria-label="Print Resume">
             🖨️
-        </div>
-        <div class="fab scroll-top" onclick="scrollToTop()" title="Scroll to Top" role="button" aria-label="Scroll to top" tabindex="0">
+        </button>
+        <button class="fab scroll-top" onclick="scrollToTop()" title="Scroll to Top" aria-label="Scroll to top">
             ↑
-        </div>
+        </button>
     </div>
 
     <script>
